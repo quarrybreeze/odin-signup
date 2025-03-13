@@ -7,6 +7,80 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <div class ="lefthalf">
+    <div id="blackbox"></div>
+    <picture>
+      <img src="assets/rtx-5090.png" alt="An image of the Nvidia 5090 GPU">
+    </picture>
+    <div class="caption">Photo by Nvidia</div>
+  </div>
+  <div class="righthalf">
+    <div class="toptext">
+      <p>Due to popular demand, we are now expanding the Verified Priority Access program to Canada.</p>
+      <p>Sign up below to express your interest.</p>
+    </div>
+    <div>
+      <form action="/sign-up" method="post"> 
+        <h1>Apply for Verified Priority Access</h1>
+
+
+        <p>
+          <label for="name">
+            <span>Name: </span>
+            <strong><span aria-label="required">*</span></strong>
+          </label>
+          <input type="text" id="name" name="userfirstname" required />
+        </p>
+        <p>
+          <label for="mail">
+            <span>Email: </span>
+            <strong><span aria-label="required">*</span></strong>
+          </label>
+          <input type="email" id="mail" name="user-mail" required />
+        </p>
+
+        <fieldset>
+          <legend>Select your RTX 50 Series product(s)</legend>
+          <ul>
+            <li>
+              <input type="checkbox" id="title_1" name="title" value="5090" />
+              <label for="title_1">GeForce RTX 5090</label>
+            </li>
+            <li>
+              <input type="checkbox" id="title_2" name="title" value="5080" />
+              <label for="title_2">GeForce RTX 5080</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <p>
+          <label for="gpu">
+            <span>Current GPU:</span>
+          </label>
+          <select id="gpu" name="user-gpu">
+            <option value="40series">GeForce RTX 40 Series</option>
+            <option value="30series">GeForce RTX 30 Series</option>
+            <option value="20series">GeForce RTX 20 Series</option>
+          </select>
+        </p>
+
+        <p>
+          <label>
+            <input type="checkbox" id="disclaimer" name="disclaimer" required />
+            I agree that NVIDIA can verify my participation in the Verified Priority Access program based on my region, configuration, games, and app usage.
+          </label>
+        </p>
+
+        <button type="submit">Submit</button>
+
+        
+
+      </form>
+    </div>
+    <div class="bottom">
+
+      <p>Already signed up? <a href="/waitlist">Check your status</a></p> 
+    </div>
+  </div>
 </body>
 </html>
